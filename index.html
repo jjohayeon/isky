@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./font/font.css" />
+    <link rel="stylesheet" href="./css/mobileStyle.css">
+</head>
+
+<body>
+
+
+    <!-- modal -->
+    <div id="blackBg">
+        <div class="modalForm">
+            <a href="#" id="closeBtn" class="closeBtn">
+                <img src="./img/closeBtn.png" alt="닫기버튼">
+            </a>
+            <form>
+                <h3>보이저 포커스 영상 <br>공유하기</h3>
+                <ul class="shareformBox">
+                    <li class="form_name">
+                        <p class="required">* 필수</p>
+                        <div class="flex name">
+                            <label for="name">이름</label>
+                            <input type="text" id="name" placeholder="홍길동">
+                        </div>
+                    </li>
+                    <!-- name form -->
+
+                    <li class="form_phoneNum">
+                        <p class="required">* 필수</p>
+                        <div class="numflex">
+                            <label for="number">연락처</label>
+                            <div class="numberinput">
+                                <input type="tel" maxlength='4' id="phonenumber">
+                                <p> - </p>
+                                <input type="tel" maxlength='4' id="phonenumber">
+                                <p>-</p>
+                                <input type="tel" maxlength='4' id="phonenumber">
+                            </div>
+                        </div>
+                        <p class="numtxt">*작성하신 번호로 이벤트 결과를 발송하오니 정확한 정보를 작성해주세요!</p>
+                    </li>
+                    <!-- phonenumber -->
+
+                    <li class="form_agree">
+                        <p class="required">* 필수</p>
+                        <div name="" id="form_selectBtn" class="form_information">
+                            <span>개인정보 취급방침</span>
+                            <div class="selectImg"><img src="./img/select.png" alt=""></div>
+                        </div>
+                        <div class="agreecheck ">
+                            <label for="checkbox">
+                                <input name="checkbox" type="checkbox" id="checkbox">
+                                <p>개인정보 수집 이용 및 취급 방침 동의</p>
+                            </label>
+                        </div>
+                    </li>
+                    <!-- agree -->
+                    <a class="submitBtn">
+                        <img src="./img/submitBtn.png" alt="">
+                    </a>
+                    <!-- Submit Button -->
+                </ul>
+            </form>
+            <!-- form -->
+        </div> <!-- //개인정보입력 모달창 -->
+
+        <div class="modalForm blueBox" style="display: none;" id="blueModalBox">
+            <a href="#" id="blueModal_closeBtn" class="closeBtn">
+                <img src="./img/closeBtn.png" alt="닫기버튼">
+            </a>
+            <div class="confirmWrap">
+                <div class="confirmBox">
+                    <ul>
+                        <li>
+                            <ul>
+                                <h4>개인정보 수집 이용에 대한 동의(이벤트참여)</h4>
+                                <li>주식회사 아이스카이네트웍스는 Poly 영상 공유 이벤트 및 경품 지급 관련 아래와 같이 고객님의 개인정보를 수집 이용합니다. </li>
+                                <li>1. 이용 목적 : 이벤트 응모 시 본인 확인 및 서비스 이용 횟수, 빈도, 컨텐츠 등 확인, 이벤트 관련 경품발송 등 업무처리</li>
+                                <li>2. 제공 항목 : 이름, 휴대폰번호, 아이스카이몰 ID, 배송주소</li>
+                                <li>3. 보유기간 : 이벤트 종료 후 6개월간 보관 (6개월 후 자동삭제)</li>
+                                <li>※ 고객님께서 입력하신 정보오류로 인한 상품 미 수령 시 책임지지 않습니다. </li>
+                                <li>※ 본 이벤트는 주식회사 아이스카이네트웍스가 주관하는 이벤트로 이벤트 이외의 목적으로 고객님의 정보를 활용하지 않습니다.</li>
+                                <li>※ 귀하께서는 본 동의를 거절하실 수 있습니다. 단, 거절하신 경우 이벤트 참여가 제한될 수 있습니다.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <h4>개인정보 처리위탁에 동의함</h4>
+                                <li>주식회사 아이스카이네트웍스는 개인정보 처리업무 중 서비스 제공에 필요한 필수적 업무를 아래와 같이 외부 전문업체에 위탁하고 운영하고 있으며,</li>
+                                <li>해당 업체는 서비스 이행을 위한 목적으로만 고객님의 정보를 사용합니다.</li>
+                                <li>1. 수탁자 : 주식회사 크리에이티브마스</li>
+                                <li>2. 경품 배송, 주소 수취</li>
+                                <li>3. 제공 항목 : 이름, 휴대폰 번호</li>
+                                <li>※ 고객님께서 입력하신 정보오류로 인한 상품 미 수령 시 책임지지 않습니다.</li>
+                                <li>※ 본 이벤트는 주식회사 아이스카이네트웍스가 주관하는 이벤트로 이벤트 이외의 목적으로 고객님의 정보를 활용하지 않습니다.</li>
+                                <li>※ 귀하께서는 본 동의를 거절하실 수 있습니다. 단, 거절하신 경우 이벤트 참여가 제한될 수 있습니다.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <a class="confirmBtn" id="confirmBtn">
+                    <img src="./img/blue_submitBtn.png" alt="">
+                </a>
+            </div>
+
+        </div> <!-- 이용약관안내 모달창 -->
+    </div>
+    <!-- //modal -->
+
+    <!-- header -->
+
+    <section id="section1">
+        <div class="container">
+            <div id="header">
+                <a href="#" class="logo">
+                    <img src="./img/logo.png" alt="" />
+                </a>
+            </div>
+            <div class="main_wrap">
+                <div class="sec1_cont">
+                    <p>보이저 포커스2 공유하고</p>
+                    <p>나에게 주는 선물 GET</p>
+                </div>
+                <div class="main_date">
+                    <div class="main_date_box">
+                        <img src="./img/time.png" alt="" class="main_date_img">
+                        <p class="main_date_text">2022.01.24 ~ 2022.02.23</p>
+                    </div>
+                    <div class="main_date_box">
+                        <img src="./img/method.png" alt="" class="main_date_img">
+                        <p class="main_date_text">2022.02.28</p>
+                    </div>
+                    <div class="main_date_box">
+                        <img src="./img/winner.png" alt="" class="main_date_img">
+                        <p class="main_date_text">보이저포커스2 테스트 영상 카카오톡 공유
+                            <span>(일 3회 참여가능)</span>
+                        </p>
+                    </div>
+                    <div class="main_note">
+                        <p>유의사항 : 공유 후, 개인정보까지 남겨 주셔야 정상적인 이벤트 참여가 가능합니다.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- section1 -->
+
+    <section id="section2">
+        <div class="container">
+            <div class="contents">
+                <div class="headset_imgBox">
+                    <div class="headset_img">
+                        <img src="./img/headset.png" class="headset" alt="" />
+                    </div>
+                    <div class="txt_top">
+                        <img src="./img/position_text_img.png" alt="">
+                    </div>
+                    <div class="txt_bottom">
+                        <p><span>신년 선물로 제격인 </span><strong>보이저 포커스2에 영상을 공유</strong> 해주세요!</p>
+                        <p>추첨을 통해 특별한 선물을 드립니다!</p>
+                    </div>
+                </div>
+
+                <div class="eventPackage_position">
+                    <div class="eventPackage">
+                        <div class="event_box">
+                            <a class="event_box_top" id="aTags">
+                                <img src="./img/event_img1.png" class="eventImg" alt="">
+                                <img src="./img/checkBtnBefore.png" alt="" class="checkBtn" />
+                            </a>
+                            <div class="event_box_bottom">
+                                <p>보이저 포커스2, 성능테스트<br>
+                                    <strong>에피소드1.오토바이</strong>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="event_box">
+                            <a class="event_box_top" id="aTags">
+                                <img src="./img/event_img2.png" class="eventImg" alt="">
+                                <img src="./img/checkBtnBefore.png" alt="" class="checkBtn">
+                            </a>
+                            <div class="event_box_bottom">
+                                <p>보이저 포커스2, 성능테스트<br>
+                                    <strong>에피소드2.가정</strong>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="event_box">
+                            <a class="event_box_top" id="aTags">
+                                <img src="./img/event_img3.png" class="eventImg" alt="">
+                                <img src="./img/checkBtnBefore.png" alt="" class="checkBtn">
+                            </a>
+                            <div class="event_box_bottom">
+                                <p>보이저 포커스2, 성능테스트<br>
+                                    <strong>에피소드3.실내 합주실</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- eventPackage -->
+                </div>
+
+                <div class="btnBox">
+                    <a class="shareBtn" id="share"><img src="./img/kakao_shareBtn.png" alt=""></a>
+                    <a class="specialBtn"
+                        onclick="window.open('http://www.iskymall.co.kr/shop/shopbrand.html?type=X&xcode=009')">
+                        <img src="./img/discountBtn.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <!-- youtube modal -->
+            <div class="youtubeModal" style="display: none">
+                <div class="popupBox">
+                    <div class="popup_top">
+                        <h2>에피소드1. 오토바이</h2>
+                        <a href="#" id="movie_closeBtn" class="movie_closeBtn">
+                            <img src="./img/closeBtn.png" alt="닫기버튼">
+                        </a>
+                    </div>
+                    <div class="movieBox">
+                        <iframe width=" 1204" height="677" src="https://www.youtube.com/embed/JeebzQH3ulI"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div> <!-- //1 -->
+            </div>
+            <!-- //youtube modal -->
+
+            <!-- youtube modal -->
+            <div class="youtubeModal" style="display: none">
+                <div class="popupBox">
+                    <div class="popup_top">
+                        <h2>에피소드2. 가정</h2>
+                        <a href="#" id="movie_closeBtn" class="movie_closeBtn">
+                            <img src="./img/closeBtn.png" alt="닫기버튼">
+                        </a>
+                    </div>
+                    <div class="movieBox">
+                        <iframe width="1204" height="677" src="https://www.youtube.com/embed/qgpRCYt3WcE"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div> <!-- //2 -->
+            </div>
+            <!-- //youtube modal -->
+
+            <!-- youtube modal -->
+            <div class="youtubeModal" style="display: none">
+                <div class="popupBox">
+                    <div class="popup_top">
+                        <h2>에피소드3. 실내 합주실</h2>
+                        <a href="#" id="movie_closeBtn" class="movie_closeBtn">
+                            <img src="./img/closeBtn.png" alt="닫기버튼">
+                        </a>
+                    </div>
+                    <div class="movieBox">
+                        <iframe width="1204" height="677" src="https://www.youtube.com/embed/RyrQ3UK9BHc"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div> <!-- //3 -->
+            </div>
+            <!-- //youtube modal -->
+
+
+        </div>
+    </section>
+    <!-- section2 -->
+
+    <section id="section3">
+        <div class="container section3_contbox">
+            <h3>이벤트 경품 안내</h3>
+            <div class="item_container">
+                <div class="item">
+                    <img src="./img/present1.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="./img/present2.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="./img/present3.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="./img/present4.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="./img/present5.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="./img/present6.png" alt="">
+                </div>
+            </div>
+            <a class="storeBtn" onclick="window.open('https://smartstore.naver.com/poly_brandstore')" id="storeBtn"><img
+                    src="./img/polyBtn.png" alt=""></a>
+        </div>
+    </section>
+    <!-- section3-->
+
+    <footer id="footer">
+        <div class="container">
+            <h3>유의사항</h2>
+                <ul>
+                    <li>제시된 이벤트 기간 내에 참여해야 이벤트 대상자에 포함됩니다.</li>
+                    <li>당첨자 발표 안내 이후 7일 이내 회신이 없을 경우 당첨이 취소될 수 있으며, 책임은 당사자에게 있습니다.</li>
+                    <li>이벤트 참여 시 제출한 개인정보는 당첨자 선정 이외의 다른 목적으로 활용되지 않으며, 당첨자 선정 이후에는 즉시 폐기됩니다.</li>
+                    <li>경품은 이벤트 사정에 따라 유사한 금액대의 상품으로 변동될 수 있으며, 변동 시 당첨자에 한해 별도 안내를 드립니다.</li>
+                    <li>5만원 초과 경품에서 발생되는 제세공과금은 전액 당첨자 본인 부담입니다. (당첨 경품가격 기준 22%)</li>
+                </ul>
+        </div>
+    </footer>
+    <!-- footer -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        let modal = document.getElementById("blackBg");
+        let blueModal = document.getElementById("blueModalBox");
+        let confirmBtn = document.getElementById("confirmBtn");
+
+        //공유하기 버튼 클릭 -> 모달창열기
+        document.getElementById('share').onclick = function (e) {
+            e.preventDefault();
+            modal.style.display = "block";
+            $("body").addClass("modal_open"); //바닥 스크롤 막기
+        }
+
+        //모달창 닫기
+        document.getElementById("closeBtn").onclick = function (e) {
+            e.preventDefault();
+            modal.style.display = "none";
+            $("body").removeClass("modal_open")
+        };
+        //이용약관 모달창 닫기
+        document.getElementById("blueModal_closeBtn").onclick = function (e) {
+            e.preventDefault();
+            blueModal.style.display = "none";
+            $("body").removeClass("modal_open")
+        };
+
+        //개인정보 동의 모달
+        document.getElementById("form_selectBtn").onclick = function (e) {
+            e.preventDefault();
+            blueModal.style.display = "block";
+        }
+        confirmBtn.onclick = function (e) {
+            e.preventDefault();
+            blueModal.style.display = "none";
+        }
+
+        // 클립보드복사 
+        function copyClipboard() {
+            var url = ''
+            var textarea = document.createElement('textarea');
+            document.body.appendChild(textarea);
+            url = window.document.location.href;
+            textarea.value = url;
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            console.log(url)
+        }
+
+        //toggle버튼 
+        // $('.event_box_top').click(function () {
+        //     var checkImg = $(this).children('img');
+        //     checkImg.attr("src", function (index, attr) {
+        //         if (attr.match('Before')) {
+        //             return attr.replace('Before', 'After');
+        //         } else {
+        //             return attr.replace('After', 'Before')
+        //         }
+        //     })
+        // })
+
+        //카카오톡 공유하기 버튼 클릭 시 선택 안되어있으면 초기값 1번이미지
+
+        $('.shareBtn').click(function () {
+            if ($('.event_box_top').hasClass('active') === false) {
+                $('.event_box_top').eq(0).addClass('active')
+                $('.checkBtn').eq(0).attr('src', './img/checkBtnAfter.png');
+            }
+        })
+
+        // 버튼 누르면 선택한 속성값으로 바꾸기
+        const aTags = $('.event_box');
+        aTags.click(function () {
+            let target = $(this)
+            let targetBtns = aTags.children('.event_box_top').children('.checkBtn')
+            if (window.innerWidth < 768) {
+                modal.style.display = "block";
+                $("html, body").css({ "overflow": "hidden", "height": "100%" });
+                $('.blackBg').bind('touchmove', function (e) {
+                    e.preventDefalt();
+                })
+                $('.blackBg .modalForm').bind('touchmove', function (e) {
+                    e.stopPropagation();
+                })
+            }
+
+            aTags.find('.event_box_top').removeClass('active');
+            target.find('.event_box_top').addClass('active');
+
+            targetBtns.each(function (index, img) {
+                $(img).attr('src', './img/checkBtnBefore.png');
+            })
+
+            if (target.children('.event_box_top').hasClass('active') === true) {
+                target.find('.checkBtn').attr('src', './img/checkBtnAfter.png');
+            } else if (!target.children('.event_box_top').hasClass('active') === true) {
+                target.find('.checkBtn').attr('src', './img/checkBtnBefore.png');
+            }
+        });
+
+
+
+
+
+
+        //유튜브 썸네일 노출 버튼
+        for (let i = 0; i < 4; i++) {
+            $('.event_box_top').eq(i).click(function () {
+                $('.youtubeModal').eq(i).css('display', 'block');
+                $("body").addClass("modal_open");
+            })
+        }
+
+
+        $('.movie_closeBtn').click(function (e) {
+            e.preventDefault();
+            $('.youtubeModal').css('display', 'none');
+            $("body").removeClass("modal_open")
+        })
+
+        // 체크박스 체크여부
+        $('.submitBtn').click(function () {
+            if (!($('input[id=checkbox]').is(':checked'))) {
+                alert('동의해주세요')
+            } else {
+                alert('됐습니다')
+            }
+        })
+
+        $('.submitBtn').click(function () {
+            if ($('input[id="name"]').val().length == 0) {
+                alert('필수 정보를 입력해주세요')
+            }
+        })
+
+
+        // 유튜브 링크
+        $('.event_box').eq(0).click(function () {
+            console.log($('.movieBox').eq(0).children(iframe))
+        })
+
+
+
+        // 공유하기 버튼 클릭
+        let onSubmit1 = () => {
+            const mobiles = document.querySelectorAll('input.mobile')
+            // 모바일
+            if (window.innerWidth < 768) {
+                setTimeout(() => {
+                    modal.style.display = "block";
+                    $("html, body").css({ "overflow": "hidden", "height": "100%" });
+                    $('.blackBg').bind('touchmove', function (e) {
+                        e.preventDefalt();
+                    })
+                    $('.blackBg .modalForm').bind('touchmove', function (e) {
+                        e.stopPropagation();
+                    })
+                }, 3000);
+            }
+            Kakao.Link.sendDefault({
+                objectType: 'feed',
+                content: {
+                    title: 'Poly 보이저 포커스 영상 공유이벤트',
+                    description: '2022년 신년, 폴리 영상 공유하고, 나에게 주는 선물을 받아보세요!',
+                    imageUrl: `${imgBox}`,
+                    link: {
+                        mobileWebUrl: `${mobileUrl}`,
+                        webUrl: `${youtubeUrl}`,
+                    },
+                },
+                buttons: [{
+                    title: '영상 보러가기',
+                    link: {
+                        mobileWebUrl: `${mobileUrl}`,
+                        webUrl: `${youtubeUrl}`,
+                    },
+                },
+                ],
+                serverCallbackArgs: {
+                    // 사용자 정의 파라미터 설정
+                    user_agent,
+                    host,
+                },
+                callback: function () {
+                    modal.style.display = "block";
+                    $("body").addClass("modal_open"); //바닥 스크롤 막기
+                    console.log(youtubeUrl);
+                },
+            })
+
+        }
+        //모달창 닫기
+        document.getElementById("closeBtn").onclick = function (e) {
+            e.preventDefault();
+            modal.style.display = "none";
+            $("body").removeClass("modal_open")
+            $("html, body").css({ "overflow": "auto", "height": "auto" });
+            $('.blackBg').unbind('touchmove');
+        };
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

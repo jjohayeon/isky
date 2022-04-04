@@ -1,0 +1,229 @@
+/* 랩탑 */
+@media screen and (max-width: 1279px) {
+  .event_box {
+    width: auto;
+  }
+  .eventPackage {
+    justify-content: space-between;
+    gap: 1.2rem;
+  }
+}
+.not_scroll {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.not_scroll .cont {
+  position: relative;
+  top: 0;
+}
+/* Tablet */
+@media screen and (max-width: 1023px) {
+  :root {
+    font-size: 12px;
+  }
+  .container {
+    width: 98%;
+  }
+  .txt_top {
+    width: 100%;
+  }
+  .txt_top img {
+    width: 100%;
+  }
+
+  /* eventPackage box */
+  .active.event_box_top .eventImg {
+    border: 6px solid #ff3300;
+    border-radius: 5rem 0 5rem 5rem;
+  }
+}
+
+/* MOBILE */
+@media screen and (max-width: 767px) {
+  :root {
+    font-size: 10px;
+  }
+  .container {
+    width: 100%;
+  }
+  .logo {
+    width: 13rem;
+  }
+  /* ********************** modal */
+  input[text] {
+    height: 3.5rem;
+  }
+  .modalForm {
+    height: 500px;
+    top: 2rem;
+    left: 1rem;
+    transform: unset;
+  }
+  .numtxt {
+    font-size: 10px;
+  }
+  /* .shareformBox {
+    height: 300px;
+  } */
+  .modalForm h3 {
+    font-size: 3.5rem;
+  }
+  .flex label {
+    font-size: 20px;
+  }
+  .numflex label {
+    font-size: 20px;
+  }
+  .modalForm form {
+    padding-top: 1.5rem;
+  }
+  .form_information {
+    height: 35px;
+  }
+  .submitBtn {
+    width: 250px;
+  }
+
+  /* section 1 */
+  #section1 {
+    background: url(../img/mo_background.png);
+    background-position: center center;
+    background-size: cover;
+    padding-bottom: 27rem;
+    display: flex;
+  }
+
+  .sec1_cont {
+    line-height: 50px;
+  }
+  .sec1_cont h3 {
+    font-size: 2.6rem;
+  }
+  .sec1_cont p {
+    font-size: 3.6rem;
+    letter-spacing: -2px;
+    line-height: 40px;
+  }
+  .sec1_cont p:last-child {
+    font-size: 3.3rem;
+  }
+  .main_date_img {
+    width: 80px;
+  }
+  .main_date_text {
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+    letter-spacing: 0px;
+  }
+
+  /* section2 */
+  .headset_imgBox {
+    margin-top: -16rem;
+  }
+  .headset_img {
+    width: 80%;
+  }
+  #section2 {
+    padding-bottom: 5vh;
+  }
+  .txt_bottom span {
+    display: block;
+  }
+
+  .eventPackage {
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .event_box_top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .active.event_box_top .eventImg {
+    border: 6px solid #ff3300;
+    border-radius: 7rem 0 7rem 7rem;
+    -webkit-border-radius: 7rem 0 7rem 7rem;
+    -moz-border-radius: 7rem 0 7rem 7rem;
+    -ms-border-radius: 7rem 0 7rem 7rem;
+  }
+  .eventImg {
+    width: 70vw;
+    height: auto;
+  }
+  .checkBtn {
+    width: 30px;
+  }
+  .event_box {
+    width: 70%;
+  }
+  .event_box_bottom {
+    margin-right: 50px;
+  }
+  .btnBox {
+    width: 80%;
+  }
+  .btnBox a {
+    padding: 1.5rem rem;
+  }
+
+  #section3 h3 {
+    font-size: 3.7rem;
+    padding: 3rem 0;
+  }
+  .item_container {
+    width: 99%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  .storeBtn {
+    width: 80%;
+  }
+  .storeBtn img {
+    width: 100%;
+  }
+
+  #footer {
+    padding: 4rem 2rem;
+    font-size: 1.2rem;
+  }
+  #footer h3 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 766px) {
+  .headset_imgBox {
+    margin-top: -14rem;
+  }
+}
+@media screen and (max-width: 325px) {
+  :root {
+    font-size: 9px;
+  }
+  .modalForm {
+    height: 400px;
+  }
+  .modalForm h3 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+  .required {
+    font-size: 10px;
+  }
+  .flex label {
+    font-size: 16px;
+  }
+  .numflex label {
+    font-size: 16px;
+  }
+  .submitBtn {
+    width: 200px;
+  }
+}
